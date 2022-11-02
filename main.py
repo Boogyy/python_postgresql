@@ -141,14 +141,6 @@ def delete_user(cursor, id_of_user):
     print(f'Пользователь с id {id_of_user} удален.')
 
 
-def get_info(cursor):
-    cursor.execute("""
-        select first_name, last_name, email, phone_number from users u 
-        full join phones p on p.user_id = u.id 
-        """)
-    pprint(cursor.fetchall())
-
-
 def find_user(cursor, user_name=None, user_surname=None, user_email=None, user_number=None):
     cursor.execute("""
         select first_name, last_name, email, phone_number from users u 
