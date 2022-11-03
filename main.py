@@ -165,8 +165,8 @@ if __name__ == "__main__":
             add_phone_number(cur, 2, '555')
             change_user_info(cur)
             delete_phone_number(cur, 2)
-            delete_user(cur, 6)
-            find_user(cur, user_surname='Gates')
+            delete_user(cur, 1)
+            find_user(cur, user_name='Bill')
 
     connection.close()
 
